@@ -12,7 +12,7 @@
 ## Tài liệu nền tảng
 
 - [Đặc tả yêu cầu sản phẩm (PRD) v1.4](docs/PRD.md)
-- [Định hướng thiết kế nền tảng V1 Core v1.0 — 16/11/2026](docs/V1_CORE_FOUNDATION.md)
+- [Định hướng thiết kế nền tảng V1 Core v1.1 — 16/11/2026 (kèm sơ đồ 5 tầng)](docs/V1_CORE_FOUNDATION.md)
 - [Sổ tay rủi ro, giới hạn và kiểm chứng học thuật v1.0](docs/ACADEMIC_RISKS_AND_VERIFICATION.md)
 
 > **Trạng thái:** Giai đoạn đặc tả yêu cầu, chưa triển khai ứng dụng. Các năng lực mô tả trong bộ tài liệu là mục tiêu và tiêu chí nghiệm thu, không phải tính năng đã có.
