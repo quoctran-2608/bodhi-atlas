@@ -29,6 +29,6 @@
 
 ## Quyền truy cập và bảo mật
 
-**Repository BodhiAtlas là công khai.** Chỉ đưa vào đây các báo cáo đã được phép công khai. Không commit thông tin đăng nhập, dữ liệu có bản quyền bị giới hạn, bản thảo mật, nguồn riêng hoặc chi tiết từ repo private khi chưa được chấp thuận công bố; các tài liệu như vậy phải được lưu trong kho có kiểm soát quyền riêng.
+**Repository BodhiAtlas là công khai.** Chỉ đưa vào đây nội dung được chủ thể có thẩm quyền cho phép công bố. Không commit thông tin đăng nhập, bí mật truy cập, dữ liệu bị hạn chế quyền phát hành hoặc bản thảo mật. Đối với báo cáo đánh giá **repo nguồn PRIVATE**, cần nêu rõ nguồn là private và kiểm tra quyền công bố báo cáo; **đánh dấu PRIVATE không làm cho file báo cáo trên repo công khai trở thành riêng tư**. Ngày 16/11/2026, theo yêu cầu công bố của chủ dự án, báo cáo **P39 — Bang-ha-giac-ngo** được lưu tại đây và công khai; repository nguồn vẫn private, các liên kết nguồn có thể yêu cầu quyền đọc.
 
 > **Nguyên tắc:** Khảo sát có căn cứ → thử nghiệm có thể tái lập → đối chiếu PRD và cổng chất lượng → quyết định có người chịu trách nhiệm. Không đảo ngược thứ tự này.
