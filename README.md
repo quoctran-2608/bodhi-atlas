@@ -17,7 +17,7 @@
 
 ## Nghiên cứu và thẩm định công nghệ
 
-- [Danh mục báo cáo đánh giá công nghệ](research/technology-assessments/README.md) — hồ sơ nghiên cứu từng công nghệ, mức độ phù hợp, chứng cứ và khoảng trống cần thử nghiệm.
+- [Bản đồ 9 nghiên cứu công nghệ — xem nhanh và mở báo cáo chi tiết](research/technology-assessments/README.md) — vị trí trong mô hình 5 tầng, giá trị đối với BodhiAtlas và những giới hạn cần kiểm chứng.
 - [Nguyên tắc quản lý nghiên cứu](research/README.md) — phân biệt đề xuất kỹ thuật với quyết định chọn công nghệ; bảo toàn nguồn và giới hạn công khai.
 
 > **Lưu ý:** Các báo cáo nghiên cứu không phải công nghệ đã được duyệt hoặc chức năng đã triển khai.
