@@ -15,6 +15,13 @@
 - [Định hướng thiết kế nền tảng V1 Core v1.1 — 16/11/2026 (kèm sơ đồ 5 tầng)](docs/V1_CORE_FOUNDATION.md)
 - [Sổ tay rủi ro, giới hạn và kiểm chứng học thuật v1.0](docs/ACADEMIC_RISKS_AND_VERIFICATION.md)
 
+## Nghiên cứu và thẩm định công nghệ
+
+- [Danh mục báo cáo đánh giá công nghệ](research/technology-assessments/README.md) — hồ sơ nghiên cứu từng công nghệ, mức độ phù hợp, chứng cứ và khoảng trống cần thử nghiệm.
+- [Nguyên tắc quản lý nghiên cứu](research/README.md) — phân biệt đề xuất kỹ thuật với quyết định chọn công nghệ; bảo toàn nguồn và giới hạn công khai.
+
+> **Lưu ý:** Các báo cáo nghiên cứu không phải công nghệ đã được duyệt hoặc chức năng đã triển khai.
+
 > **Trạng thái:** Giai đoạn đặc tả yêu cầu, chưa triển khai ứng dụng. Các năng lực mô tả trong bộ tài liệu là mục tiêu và tiêu chí nghiệm thu, không phải tính năng đã có.
 
 **Nguyên tắc:** Nguồn thật trước — kiểm chứng được mới dẫn — AI không tự tạo bằng chứng.
