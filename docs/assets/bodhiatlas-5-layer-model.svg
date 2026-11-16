@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1120" viewBox="0 0 1280 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Mô hình tổng thể 5 tầng của BodhiAtlas</title>
+  <desc id="desc">Tầng 1 thư viện gốc; Tầng 2 tiêu hóa và định vị; Tầng 3 tra cứu và kiểm chứng bằng code là lõi bắt buộc; Tầng 4A RAG và 4B Second Brain là hai lớp mở rộng tùy chọn; Tầng 5 giao diện nghiên cứu có thể dùng trực tiếp Tầng 3, không qua các lớp mở rộng.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d1624"/><stop offset="1" stop-color="#070d15"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#182333"/><stop offset="1" stop-color="#111a29"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#064333"/><stop offset="1" stop-color="#05291f"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="14" flood-color="#000" flood-opacity=".28"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#b8c7d8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Inter,"Noto Sans",Arial,sans-serif}
+      .title{font-size:33px;font-weight:800;fill:#f9fbfd;letter-spacing:.4px}
+      .subtitle{font-size:18px;fill:#bac9d9}
+      .meta{font-size:14px;fill:#8397ad}
+      .stage{font-size:27px;font-weight:780;fill:#f7fbff}
+      .stagewide{font-size:26px;font-weight:780;fill:#fff}
+      .detail{font-size:19px;fill:#d8e3ed}
+      .detailsmall{font-size:17px;fill:#cbd9e8}
+      .pill{font-size:15px;fill:#5af2ac;font-weight:800;letter-spacing:.65px}
+      .optional{font-size:15px;fill:#b7c6d7;font-weight:650}
+      .foot{font-size:17px;fill:#aebfd2}
+      .line{fill:none;stroke:#b8c7d8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="1120" fill="url(#bg)"/>
+  <rect x="30" y="25" width="1220" height="1068" rx="28" fill="none" stroke="#293747" stroke-width="1.4"/>
+  <text x="640" y="76" text-anchor="middle" class="title">MÔ HÌNH TỔNG THỂ 5 TẦNG CỦA BODHIATLAS</text>
+  <text x="640" y="109" text-anchor="middle" class="subtitle">Kiến trúc khái niệm — V1 Core và các lớp mở rộng</text>
+  <text x="640" y="135" text-anchor="middle" class="meta">Phiên bản sơ đồ 1.0 · Ngày 16/11/2026 · Chưa chốt công nghệ triển khai</text>
+
+  <rect x="90" y="166" width="1100" height="126" rx="18" fill="url(#panel)" stroke="#637387" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="206" class="stage" text-anchor="middle">TẦNG 1 — THƯ VIỆN GỐC</text>
+  <text x="640" y="244" class="detail" text-anchor="middle">PDF · EPUB · DOCX · Markdown · TEI/XML</text>
+  <text x="640" y="271" class="detailsmall" text-anchor="middle">Metadata · Tác giả · Ấn bản · File gốc bất biến</text>
+
+  <path d="M640 298 V322" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="334" width="1100" height="116" rx="18" fill="url(#panel)" stroke="#637387" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="376" class="stage" text-anchor="middle">TẦNG 2 — TIÊU HÓA VÀ ĐỊNH VỊ</text>
+  <text x="640" y="413" class="detail" text-anchor="middle">Trích xuất / OCR · Cấu trúc · Đoạn · Trang · Ánh xạ nguồn · Chất lượng</text>
+
+  <path d="M640 456 V480" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="65" y="492" width="1150" height="167" rx="20" fill="url(#core)" stroke="#3fe79b" stroke-width="2.4" filter="url(#shadow)"/>
+  <rect x="79" y="505" width="1122" height="140" rx="14" fill="none" stroke="#1e8763" stroke-opacity=".5"/>
+  <text x="640" y="541" class="stagewide" text-anchor="middle">TẦNG 3 — TRA CỨU VÀ KIỂM CHỨNG BẰNG CODE</text>
+  <text x="640" y="581" class="detail" text-anchor="middle">EXACT · NORMALIZED · FUZZY · LEXICON · Source Locator</text>
+  <rect x="530" y="600" width="220" height="40" rx="20" fill="#0c4933" stroke="#3fe79b" stroke-width="1.8"/>
+  <text x="640" y="627" class="pill" text-anchor="middle">TRÁI TIM V1 CORE</text>
+
+  <!-- Tầng 3 cấp dữ liệu trực tiếp cho giao diện, không qua RAG hoặc Second Brain. -->
+  <path d="M640 661 V927" class="line" marker-end="url(#arrow)"/>
+
+  <!-- Hai nhánh tùy chọn độc lập, xuất phát từ dữ liệu đã kiểm chứng. -->
+  <path d="M640 684 H352 Q338 684 338 699 V724" class="line" marker-end="url(#arrow)"/>
+  <path d="M640 684 H942 Q956 684 956 699 V724" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="740" width="520" height="136" rx="19" fill="#142031" fill-opacity=".82" stroke="#8090a5" stroke-width="1.8" stroke-dasharray="9 7"/>
+  <rect x="273" y="718" width="154" height="31" rx="15.5" fill="#263442" stroke="#8194a8"/>
+  <text x="350" y="739" text-anchor="middle" class="optional">LỚP MỞ RỘNG</text>
+  <text x="350" y="795" text-anchor="middle" class="stage">TẦNG 4A — RAG</text>
+  <text x="350" y="830" text-anchor="middle" class="detailsmall">Tìm kiếm ngữ nghĩa · Cung cấp</text>
+  <text x="350" y="856" text-anchor="middle" class="detailsmall">ngữ cảnh cho AI nghiên cứu</text>
+
+  <rect x="670" y="740" width="520" height="136" rx="19" fill="#142031" fill-opacity=".82" stroke="#8090a5" stroke-width="1.8" stroke-dasharray="9 7"/>
+  <rect x="853" y="718" width="154" height="31" rx="15.5" fill="#263442" stroke="#8194a8"/>
+  <text x="930" y="739" text-anchor="middle" class="optional">LỚP MỞ RỘNG</text>
+  <text x="930" y="795" text-anchor="middle" class="stage">TẦNG 4B — SECOND BRAIN</text>
+  <text x="930" y="830" text-anchor="middle" class="detailsmall">Wiki · Ghi chú · Quan hệ</text>
+  <text x="930" y="856" text-anchor="middle" class="detailsmall">Tri thức được tích lũy và thẩm định</text>
+
+  <path d="M350 877 V908 Q350 921 366 921 H405 V927" class="line" marker-end="url(#arrow)"/>
+  <path d="M930 877 V908 Q930 921 914 921 H875 V927" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="936" width="1100" height="113" rx="18" fill="url(#panel)" stroke="#91a5bb" stroke-width="1.7" filter="url(#shadow)"/>
+  <text x="640" y="977" text-anchor="middle" class="stage">TẦNG 5 — GIAO DIỆN NGHIÊN CỨU</text>
+  <text x="640" y="1017" text-anchor="middle" class="detail">Phiếu truy nguyên · Tra cứu độc lập · So sánh tác giả · Kiểm bản thảo</text>
+
+  <text x="640" y="1081" text-anchor="middle" class="foot">Tầng 3 là lõi bắt buộc; Tầng 4A và 4B tùy chọn, không thay thế kiểm chứng nguồn.</text>
+</svg>
