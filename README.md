@@ -17,7 +17,7 @@
 
 ## Nghiên cứu và thẩm định công nghệ
 
-- [Bản đồ 24 nghiên cứu công nghệ — xem nhanh và mở báo cáo chi tiết](research/technology-assessments/README.md) — 6 nhóm chức năng, tóm tắt giá trị/giới hạn và liên kết tới từng báo cáo; có tệp POC P42 tham khảo.
+- [Bản đồ 55 đề tài nghiên cứu công nghệ và nguồn dữ liệu — xem nhanh và mở báo cáo chi tiết](research/technology-assessments/README.md) — 7 nhóm chức năng; hiện có 24 báo cáo chi tiết, 31 đề tài chờ báo cáo; cập nhật 16/11/2026.
 - [Nguyên tắc quản lý nghiên cứu](research/README.md) — phân biệt đề xuất kỹ thuật với quyết định chọn công nghệ; bảo toàn nguồn và giới hạn công khai.
 
 > **Lưu ý:** Các báo cáo nghiên cứu không phải công nghệ đã được duyệt hoặc chức năng đã triển khai.
