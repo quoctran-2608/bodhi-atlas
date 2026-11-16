@@ -1,7 +1,7 @@
 # ĐỊNH HƯỚNG THIẾT KẾ NỀN TẢNG BODHIATLAS V1 CORE
 
 **Tên tiếng Anh:** BodhiAtlas V1 Core — Source-Grounded Knowledge Retrieval  
-**Phiên bản tài liệu:** 1.0  
+**Phiên bản tài liệu:** 1.1  
 **Ngày lập:** 16/11/2026  
 **Ngày cập nhật:** 16/11/2026  
 **Trạng thái:** Định hướng thiết kế — chưa chốt kiến trúc triển khai hoặc công nghệ cụ thể  
@@ -31,6 +31,26 @@ BodhiAtlas **không chỉ là** phần mềm chứa sách, kho tóm tắt, Secon
 3. Đơn giản, tiết kiệm, mở rộng lâu dài và độc lập với nhà cung cấp AI.
 
 ## 2. Mô hình nền tảng: từ file gốc đến chứng cứ truy nguyên
+
+### 2.1. Bức tranh tổng thể 5 tầng của BodhiAtlas
+
+![Mô hình tổng thể 5 tầng của BodhiAtlas — Tầng 3 là lõi tra cứu và kiểm chứng bằng code; Tầng 4A RAG và Tầng 4B Second Brain là phần mở rộng](assets/bodhiatlas-5-layer-model.svg)
+
+*Hình 1. Mô hình kiến trúc khái niệm 5 tầng — lập ngày **16/11/2026**. Sơ đồ minh họa các **năng lực và quan hệ chức năng**, không mặc định năm tầng là năm dịch vụ/phần mềm riêng, cũng không chốt công nghệ triển khai.*
+
+**Cách đọc sơ đồ:**
+
+- **Tầng 1 — Thư viện gốc:** giữ file gốc bất biến, metadata, định danh tác phẩm và ấn bản.
+- **Tầng 2 — Tiêu hóa và định vị:** trích xuất/OCR, nhận diện cấu trúc, ánh xạ trở lại vị trí nguồn, ghi độ bao phủ và lỗi.
+- **Tầng 3 — Tra cứu và kiểm chứng bằng code:** trái tim bắt buộc của V1 Core; tìm ứng viên và kiểm lại câu chữ, nguồn, định vị mà không cần LLM tạo sinh.
+- **Tầng 4A — RAG** và **Tầng 4B — Second Brain:** hai năng lực mở rộng tùy chọn; RAG phục vụ truy xuất ngữ nghĩa/ngữ cảnh cho AI, Second Brain tích lũy tri thức và quan hệ đã được thẩm định. AI Research không đồng nghĩa với riêng RAG.
+- **Tầng 5 — Giao diện nghiên cứu:** hiển thị phiếu truy nguyên và kết quả tra cứu trực tiếp từ Tầng 3; nếu cần, bổ sung phân tích hoặc ghi chú từ các lớp mở rộng.
+
+**Điểm không được hiểu sai:** Tầng 5 có đường đi **trực tiếp từ Tầng 3**, không bắt buộc đi qua RAG hay Second Brain. Một kết quả tìm thấy ở Tầng 4 cũng phải được kiểm lại trên nguồn gốc trước khi công bố như chứng cứ đã xác minh.
+
+### 2.2. Luồng dữ liệu và truy nguyên chi tiết
+
+Sơ đồ dưới đây bổ sung chi tiết nội bộ của tầng xử lý, chỉ mục và kiểm chứng; không thay thế sơ đồ tổng thể phía trên.
 
 Luồng khái niệm:
 
@@ -73,7 +93,7 @@ VĂN BẢN TRÍCH XUẤT CÓ CẤU TRÚC + BẢN ĐỒ NGUỒN
 2. **Văn bản trích xuất có cấu trúc không thay thế bản gốc.** Mỗi bản trích xuất gắn với file/ấn bản và phiên bản xử lý; lỗi OCR, trang thiếu và vùng không đọc được phải được lưu/hiển thị.
 3. **Chỉ mục và chunk là dẫn xuất có thể tạo lại.** Chuẩn hóa, bỏ dấu, chuyển tự, embeddings hay chia chunk không được sửa nguyên văn hoặc trở thành địa chỉ dẫn chứng học thuật duy nhất. Khi tái lập chỉ mục, dẫn chứng cũ phải tiếp tục mở đúng chỗ hoặc báo cần kiểm lại.
 
-### 2.1. Các đơn vị dữ liệu cần phân biệt
+### 2.3. Các đơn vị dữ liệu cần phân biệt
 
 | Đơn vị | Chức năng |
 |---|---|
