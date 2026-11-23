@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 23/11/2026 (Asia/Ho_Chi_Minh) · **56 đề tài** · **25 báo cáo đã có trên GitHub** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 23/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **26 báo cáo đã có trên GitHub** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 23/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P56–P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 23/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -17,7 +17,7 @@ BodhiAtlas không phải chỉ là “chat với PDF”. Đích đến là một
 - **Tìm và xác minh:** Chuỗi chữ/thuật ngữ/đoạn nào khớp, kiểu khớp gì, có mở lại đúng nguồn không?
 - **Phân tích và tích lũy:** Tác giả lập luận thế nào, có phản chứng không, nhận định nào đã được người nghiên cứu xác nhận?
 
-Một công cụ có thể bao phủ nhiều tầng; vì vậy **56 mục bên dưới không phải 56 thành phần phải cài**.
+Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên dưới không phải 57 thành phần phải cài**.
 
 ## Chọn đọc theo vấn đề
 
@@ -29,7 +29,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **56 mục bên d
 | Kế thừa corpus Phật học đã số hóa | P03 BuddhismDocuments, P40 FoJin, P41 Dharmamitra, P26 Bilara, P28 CBETA, P29 84000, P51 BDRC |
 | Đối chiếu song hành/dị bản, phân biệt nguồn | P27 sc-data, P42 MITRA, P48 CollateX, P49 passim, P33 TEI |
 | Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace; **P57 book-memex** (thư viện eBook và reader) |
-| Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI |
+| Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI, **P56 Open Notebook** (workspace AI/nghiên cứu tùy chọn) |
 
 ## Cách đọc bằng chứng trong các báo cáo
 
@@ -39,7 +39,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **56 mục bên d
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 56 đề tài
+## Danh mục 57 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -75,6 +75,11 @@ Nhóm có thể giải quyết đồng thời nhiều chức năng. Cần phân 
 **Là gì:** Giao diện tương tác AI có chức năng knowledge và truy vấn tài liệu.  
 **BodhiAtlas cần kiểm:** Ứng viên UI/AI layer; không được trao nhiệm vụ xác thực trích dẫn học thuật cho chatbot.
 
+
+**P56 · [Open Notebook](https://github.com/lfnovo/open-notebook)** · [Đọc báo cáo](REPORT_56_OPEN_NOTEBOOK.md)  
+**Là gì:** Không gian nghiên cứu và ghi chú hỗ trợ nhiều notebook, nguồn tài liệu, tìm kiếm BM25/vector, Ask/Chat bằng AI, REST API; có thư viện trích xuất `content-core` tách riêng.  
+**Giá trị với BodhiAtlas:** Có thể thử làm **Research Workspace tùy chọn ở V2/V3**, nhận bản chiếu phiếu chứng cứ một chiều; thử tái dùng `content-core` cho ingestion **chỉ sau POC**. Lõi V1 vẫn cần quản lý nguyên bản, ấn bản, source map và xác minh độc lập.  
+**Giới hạn quan trọng:** Báo cáo kết luận **`TRIAL ONLY` cho toàn bộ Open Notebook**, không dùng làm hệ thống lưu chứng cứ có thẩm quyền: Search BM25/top-K **không** là EXACT mọi vị trí, citation chỉ trỏ item, thiếu mapping nguồn/phiên bản và có rủi ro xóa upload theo cấu hình. **Đã đọc code, chưa chạy upstream/POC**; ưu tiên có điều kiện phương án D — Minimal BodhiAtlas Core. *Báo cáo gốc có một số permalink BodhiAtlas dùng owner khác repo hiện tại, cần đối chiếu khi mở nguồn.*
 
 ### 02. Quản lý thư viện, tư liệu và quy trình số hóa
 
@@ -314,7 +319,7 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ## Các khoảng trống cần tiếp tục kiểm tra
 
-Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Sáu hướng dưới đây là **đề xuất khảo sát ngoài bộ P01–P55**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
+Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Sáu hướng dưới đây là **đề xuất khảo sát ngoài danh mục 57 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
 
 | Công nghệ | Khoảng trống nó giúp xem xét | Ưu tiên khảo sát |
 |---|---|---|
