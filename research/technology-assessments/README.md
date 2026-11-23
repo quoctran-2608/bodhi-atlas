@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 16/11/2026 (Asia/Ho_Chi_Minh) · **55 đề tài** · **24 báo cáo đã có trên GitHub** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 23/11/2026 (Asia/Ho_Chi_Minh) · **56 đề tài** · **25 báo cáo đã có trên GitHub** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 16/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 23/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -17,7 +17,7 @@ BodhiAtlas không phải chỉ là “chat với PDF”. Đích đến là một
 - **Tìm và xác minh:** Chuỗi chữ/thuật ngữ/đoạn nào khớp, kiểu khớp gì, có mở lại đúng nguồn không?
 - **Phân tích và tích lũy:** Tác giả lập luận thế nào, có phản chứng không, nhận định nào đã được người nghiên cứu xác nhận?
 
-Một công cụ có thể bao phủ nhiều tầng; vì vậy **55 mục bên dưới không phải 55 thành phần phải cài**.
+Một công cụ có thể bao phủ nhiều tầng; vì vậy **56 mục bên dưới không phải 56 thành phần phải cài**.
 
 ## Chọn đọc theo vấn đề
 
@@ -28,18 +28,18 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **55 mục bên d
 | Tìm đoạn rồi **mở lại đúng vị trí gốc** | P13 PyMuPDF, P34 IIIF, P35 Mirador, P36 EPUB CFI, P33 TEI |
 | Kế thừa corpus Phật học đã số hóa | P03 BuddhismDocuments, P40 FoJin, P41 Dharmamitra, P26 Bilara, P28 CBETA, P29 84000, P51 BDRC |
 | Đối chiếu song hành/dị bản, phân biệt nguồn | P27 sc-data, P42 MITRA, P48 CollateX, P49 passim, P33 TEI |
-| Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace |
+| Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace; **P57 book-memex** (thư viện eBook và reader) |
 | Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI |
 
 ## Cách đọc bằng chứng trong các báo cáo
 
-- **`[DOC]`**: Nhà phát triển công bố; **`[CODE]`**: Đã thấy trong mã nguồn; **`[TESTED]`**: Đã chạy kiểm nghiệm có log; **`[INFERRED]`**: Suy luận; **`[UNKNOWN]`**: Chưa rõ. `TESTED` không được gán chỉ vì repo có file test.
+- **`[DOC]`**: Nhà phát triển công bố; **`[CODE]`**: Đã thấy trong mã nguồn; **`[TESTED]`**: Đã chạy kiểm nghiệm trên đối tượng thực có log; **`[TESTED-ISOLATED]`**: Đã chạy phép thử cô lập/mô phỏng, không phải kiểm thử upstream; **`[INFERRED]`**: Suy luận; **`[UNKNOWN]`**: Chưa rõ. `TESTED` không được gán chỉ vì repo có file test.
 - Phân biệt `EXACT` (đúng chuỗi nguyên văn), `NORMALIZED`, `FUZZY`, `LEXICON`, `SEMANTIC`. **Điểm gần nghĩa không chứng minh một nhận định đúng**.
 - Khi đọc một kết quả, luôn hỏi: đã có **file ID, ấn bản, checksum, trang/đoạn và cách đối chiếu** chưa? OCR/chunk/RAG có thể bỏ sót hoặc thêm sai chữ.
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 55 đề tài
+## Danh mục 56 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -112,6 +112,11 @@ Nhóm quản lý “sách nào, ấn bản nào, file nào, quyền nào”; kh�
 **Là gì:** Phần mềm lưu trữ, OCR, gắn metadata và tìm kiếm tài liệu có giao diện web.  
 **BodhiAtlas cần kiểm:** Ứng viên thay cụm quản lý file và ingest; cần kiểm thư viện EPUB, ấn bản và source locator.
 
+
+**P57 · [book-memex](https://github.com/queelius/book-memex)** · [Đọc báo cáo](REPORT_57_BOOK_MEMEX.md) · [Mã và log thử nghiệm cô lập](reproduction/P57/README.md)  
+**Là gì:** Thư viện ebook cá nhân có quản lý file SHA-256, đọc PDF/EPUB, tìm kiếm SQLite FTS5, ghi chú và cổng REST/MCP, không bắt buộc sử dụng LLM.  
+**Giá trị với BodhiAtlas:** `USE AS COMPONENT` **có điều kiện** — tham khảo mô hình lưu file theo hash, FTS candidate, registry extractor và giao diện reader; báo cáo **ưu tiên phương án D — Minimal BodhiAtlas Evidence Core**, không fork cả repo làm lõi nguồn có thẩm quyền.  
+**Giới hạn cần kiểm:** Chưa có hợp đồng đầy đủ về ấn bản/file/revision, exhaustive EXACT, locator chính xác và citation verifier độc lập. Có 30 mục chứng cứ, Fit–Gap C01–C15, POC cô lập SQLite/PDF và kế hoạch TC01–TC15; **upstream tests và POC tích hợp chưa chạy**. Kiến trúc đề xuất có thể đảo nếu kiểm nghiệm thực chứng minh phương án khác đạt G1/G2 với rủi ro/chi phí thấp hơn.
 
 ### 03. Tiêu hóa tài liệu, OCR và bố cục
 
