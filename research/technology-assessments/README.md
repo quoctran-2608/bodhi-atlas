@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **58 đề tài** · **29 báo cáo đã có trên GitHub (27 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **59 đề tài** · **30 báo cáo đã có trên GitHub (28 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P57 cùng P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P57 cùng P60–P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -24,13 +24,13 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên d
 | Nếu bạn muốn... | Hãy xem trước |
 |---|---|
 | Nạp sách và OCR tự động | P44 Paperless-ngx, P01 RAGFlow; P12 Docling, P45 MinerU, P46 Marker, P53 Xberg/Kreuzberg |
+| Kiểm thử OCR, bố cục phức tạp và định vị ảnh gốc | [P60 OCR-D (R2)](REPORT_60_OCR_D.md), P15 Tesseract, P12 Docling; PAGE/METS, ground truth và coverage |
 | Tìm `anatta`/`anattā` và biến thể chính xác không LLM | P20 SQLite FTS5, P21 OpenSearch, P22 PostgreSQL; P43 DPD, P31 OpenCC, P32 pyewts |
 | Tìm đoạn rồi **mở lại đúng vị trí gốc** | P13 PyMuPDF, P34 IIIF, P35 Mirador, P36 EPUB CFI, P33 TEI |
 | Kế thừa corpus Phật học đã số hóa | P03 BuddhismDocuments, P40 FoJin, P41 Dharmamitra, P26 Bilara, P28 CBETA, P29 84000, P51 BDRC |
 | Đối chiếu song hành/dị bản, phân biệt nguồn | P27 sc-data, P42 MITRA, P48 CollateX, P49 passim, P33 TEI |
 | Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace; **P57 book-memex** (thư viện eBook và reader) |
 | Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI, **P56 Open Notebook** (workspace AI/nghiên cứu tùy chọn) |
-
 | Kiểm thử tìm đủ mọi vị trí, chất lượng xếp hạng và độ bao phủ | [P61 BEIR](REPORT_61_BEIR.md), P20 SQLite FTS5, P03 BCR; tách Track A (EXACT/G2) và Track B (ranked retrieval) |
 
 ## Cách đọc bằng chứng trong các báo cáo
@@ -41,7 +41,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên d
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 58 đề tài
+## Danh mục 59 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -183,6 +183,13 @@ Nhóm biến file thành văn bản cấu trúc. Thước đo là fidelity, th�
 **Là gì:** Framework thống nhất trích xuất nội dung từ nhiều định dạng, mở rộng bằng bộ xử lý khác.  
 **BodhiAtlas cần kiểm:** Ứng viên ingest ít thành phần; kiểm giữ layout và source map chứ không chỉ có text.
 
+
+**P60 · [OCR-D](https://github.com/OCR-D/core)** · [Đọc báo cáo](REPORT_60_OCR_D.md) (R2, 25/11/2026)  
+**Là gì:** Hệ sinh thái workflow OCR, chuẩn PAGE/METS, quản lý artifact theo trang và processor, cùng công cụ QA dinglehopper; không phải OCR model, catalog hay search engine.  
+**Giá trị với BodhiAtlas:** Tham khảo ngay phương pháp E — manifest trang, trạng thái từng trang, thứ tự đọc, role, bất biến revision, đối chiếu ground truth và lỗi trọng yếu. Thử phương án C hẹp (import PAGE/METS và evaluator ngoại tuyến riêng) khi có đầu vào phù hợp; cân nhắc B (workflow tài liệu lịch sử có giới hạn) nếu đo được lợi ích. Lõi định danh, source map, exhaustive EXACT và kiểm chứng G2 độc lập vẫn thuộc BodhiAtlas; không dùng METS thay catalog.  
+**Khuyến nghị:** `DEFER` full OCR-D runtime V1. Dùng baseline trực tiếp (Tesseract/Docling là ứng viên) và QA chung trước; không mặc định fork, thêm service hay xuất PAGE cho mọi định dạng.  
+**Phạm vi chứng cứ R2:** OCR-D/core v3.13.3 tại `c9272c82b2f4bf62ca7fa6773c00980a7b8e67b3`; 33 Evidence Ledger, C01–C15, H01–H12, TC01–TC16. Đọc schema PAGE 2019-07-15 và METS 1.12.1; tổng 12 lần gọi Tesseract local, 4 phép thử cô lập R1 và 1 suite R2 có 7 ca lỗi bị từ chối. Mẫu hai cột bị xen thứ tự khi OCR cả trang (34/106 lỗi codepoint sau chuẩn hóa); dùng vùng cắt thủ công đã biết giảm xuống 0/106 trên cùng mẫu. Không chứng minh phân vùng tự động OCR-D, EXACT raw hay hiệu quả trên corpus thật. Mã/log nằm trong §13.  
+**Giới hạn:** 0 lần chạy OCR-D upstream; chưa chạy XSD validator/dinglehopper, chưa có gold lịch sử được cấp quyền, kiểm chứng chữ trực tiếp trên ảnh, benchmark so sánh đầy đủ hoặc TCO. Quyền model/corpus và mâu thuẫn license processor cần giải quyết. Adapter thử nghiệm không phải parser PAGE đầy đủ. Không có nghiệm thu G1–G6. Xem thêm [P61 — BEIR](REPORT_61_BEIR.md) để tách QA ingest/OCR khỏi QA retrieval.
 
 ### 04. Tìm kiếm code-only và search engine
 
@@ -335,7 +342,7 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ## Các khoảng trống cần tiếp tục kiểm tra
 
-Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Năm hướng dưới đây là **đề xuất khảo sát ngoài danh mục 58 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
+Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Bốn hướng dưới đây là **đề xuất khảo sát ngoài danh mục 59 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
 
 | Công nghệ | Khoảng trống nó giúp xem xét | Ưu tiên khảo sát |
 |---|---|---|
@@ -343,9 +350,8 @@ Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Năm hướng
 | [Readium Web](https://github.com/readium/web) | Bộ công cụ trình đọc EPUB trên web, cần kiểm tra locator/CFI | Rất cao |
 | [Unstructured](https://github.com/Unstructured-IO/unstructured) | Pipeline tiền xử lý nhiều định dạng, so sánh với Docling/MinerU/Marker | Cao |
 | [Haystack](https://github.com/deepset-ai/haystack) | Framework pipeline retrieval/RAG có thể cấu hình thay vì phụ thuộc platform tích hợp | Trung bình–cao |
-| [OCR-D](https://github.com/OCR-D) | Công cụ và chuẩn luồng OCR với chú trọng ground truth/đánh giá tài liệu lịch sử | Theo nhu cầu bản thảo cổ |
 
-**Lưu ý:** BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
+**Lưu ý:** OCR-D đã có [nghiên cứu P60 (R2)](REPORT_60_OCR_D.md) trong nhóm 03; BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
 
 ## Quản trị tài liệu
 
