@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **59 đề tài** · **30 báo cáo đã có trên GitHub (28 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **60 đề tài** · **31 báo cáo đã có trên GitHub (29 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P57 cùng P60–P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P58 cùng P60–P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -17,13 +17,13 @@ BodhiAtlas không phải chỉ là “chat với PDF”. Đích đến là một
 - **Tìm và xác minh:** Chuỗi chữ/thuật ngữ/đoạn nào khớp, kiểu khớp gì, có mở lại đúng nguồn không?
 - **Phân tích và tích lũy:** Tác giả lập luận thế nào, có phản chứng không, nhận định nào đã được người nghiên cứu xác nhận?
 
-Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên dưới không phải 57 thành phần phải cài**.
+Một công cụ có thể bao phủ nhiều tầng; vì vậy **60 mục bên dưới không phải 60 thành phần phải cài**.
 
 ## Chọn đọc theo vấn đề
 
 | Nếu bạn muốn... | Hãy xem trước |
 |---|---|
-| Nạp sách và OCR tự động | P44 Paperless-ngx, P01 RAGFlow; P12 Docling, P45 MinerU, P46 Marker, P53 Xberg/Kreuzberg |
+| Nạp sách và OCR tự động | P44 Paperless-ngx, P01 RAGFlow; P12 Docling, P45 MinerU, P46 Marker, P53 Xberg/Kreuzberg, [P58 Unstructured (R2)](REPORT_58_UNSTRUCTURED.md) |
 | Kiểm thử OCR, bố cục phức tạp và định vị ảnh gốc | [P60 OCR-D (R2)](REPORT_60_OCR_D.md), P15 Tesseract, P12 Docling; PAGE/METS, ground truth và coverage |
 | Tìm `anatta`/`anattā` và biến thể chính xác không LLM | P20 SQLite FTS5, P21 OpenSearch, P22 PostgreSQL; P43 DPD, P31 OpenCC, P32 pyewts |
 | Tìm đoạn rồi **mở lại đúng vị trí gốc** | P13 PyMuPDF, P34 IIIF, P35 Mirador, P36 EPUB CFI, P33 TEI |
@@ -41,7 +41,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên d
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 59 đề tài
+## Danh mục 60 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -183,6 +183,13 @@ Nhóm biến file thành văn bản cấu trúc. Thước đo là fidelity, th�
 **Là gì:** Framework thống nhất trích xuất nội dung từ nhiều định dạng, mở rộng bằng bộ xử lý khác.  
 **BodhiAtlas cần kiểm:** Ứng viên ingest ít thành phần; kiểm giữ layout và source map chứ không chỉ có text.
 
+
+**P58 · [Unstructured OSS](https://github.com/Unstructured-IO/unstructured)** · [Đọc báo cáo](REPORT_58_UNSTRUCTURED.md) (R2, 25/11/2026)  
+**Là gì:** Thư viện Python local phân tách PDF, EPUB, DOCX, HTML, Markdown và văn bản thành các element có kiểu, metadata, tọa độ tùy chọn; hỗ trợ OCR/layout và chunking. Phạm vi nghiên cứu là OSS, không suy tính năng SaaS sang OSS.  
+**Giá trị với BodhiAtlas:** Tham khảo routing theo profile, phân loại vùng nội dung và metadata; thử `fast`, `ocr_only` hoặc `hi_res` riêng khi baseline có khoảng trống thực sự. Giữ native locator cho EPUB/OOXML/TXT/TEI/Bilara; lưu artifact chưa chunk, đối soát inventory từng trang và tách định danh file/ấn bản/revision, source map, EXACT toàn occurrence và verifier độc lập khỏi parser. Chunking chỉ là ứng viên chuẩn bị dữ liệu V2/V3.  
+**Khuyến nghị:** `DEFER` dependency mặc định V1; ưu tiên D — direct Docling + parser native làm baseline cần kiểm nghiệm, B — Unstructured theo profile hẹp nếu TC16 chứng minh lợi ích sau khi qua G1/G2. Không fork hoặc cài full extras mặc định. Chưa chứng minh Docling vượt Unstructured trong benchmark.  
+**Phạm vi chứng cứ R2:** Snapshot 0.27.38 tại `2653935aa783e72b89b345cf63a74324962cdd75`; 37 mục Evidence Ledger, C01–C15, H01–H12, TC01–TC16; 4 phép thử logic cô lập, 2 module upstream đúng blob (`coordinates.py` và `strategies.py`, module strategy có 6 ca mock dependency), thí nghiệm dependency trực tiếp PDFMiner/PyMuPDF/Pandoc và 8 lượt Tesseract. Fixture mixed PDF có trang scan và blank đều không trả text; router module chọn fast khi cờ any-text đúng. Pandoc giữ hai câu lặp nhưng mất native href đầy đủ và ID đoạn trong fixture EPUB. 8/8 lượt OCR có exit 0 nhưng chỉ 1/8 khớp gold; không quy lỗi này cho pipeline Unstructured. Mã và log ở §9 và §13.  
+**Giới hạn quan trọng:** 0/16 TC upstream/integration hoàn tất; chưa cài toàn package Unstructured/Docling, chưa benchmark head-to-head, chưa xác minh G1–G6. Bbox block không là char locator, chunk overlap và giới hạn orig_elements có thể làm mất/đếm trùng nguồn nếu dùng sai. Cần khóa assets/giấy phép, tắt telemetry và chặn network egress, whitelist OCR local; cloud OCR nằm ngoài phạm vi. Đối chiếu [P12 Docling](REPORT_12_DOCLING.md), [P60 OCR-D](REPORT_60_OCR_D.md) và [P61 BEIR](REPORT_61_BEIR.md) khi xây gold và QA chung.
 
 **P60 · [OCR-D](https://github.com/OCR-D/core)** · [Đọc báo cáo](REPORT_60_OCR_D.md) (R2, 25/11/2026)  
 **Là gì:** Hệ sinh thái workflow OCR, chuẩn PAGE/METS, quản lý artifact theo trang và processor, cùng công cụ QA dinglehopper; không phải OCR model, catalog hay search engine.  
@@ -342,16 +349,15 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ## Các khoảng trống cần tiếp tục kiểm tra
 
-Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Bốn hướng dưới đây là **đề xuất khảo sát ngoài danh mục 59 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
+Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Ba hướng dưới đây là **đề xuất khảo sát ngoài danh mục 60 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
 
 | Công nghệ | Khoảng trống nó giúp xem xét | Ưu tiên khảo sát |
 |---|---|---|
 | [PDF.js](https://github.com/mozilla/pdf.js) | Viewer PDF trong browser, mở trang và đánh dấu câu trích trên bản gốc | Rất cao |
 | [Readium Web](https://github.com/readium/web) | Bộ công cụ trình đọc EPUB trên web, cần kiểm tra locator/CFI | Rất cao |
-| [Unstructured](https://github.com/Unstructured-IO/unstructured) | Pipeline tiền xử lý nhiều định dạng, so sánh với Docling/MinerU/Marker | Cao |
 | [Haystack](https://github.com/deepset-ai/haystack) | Framework pipeline retrieval/RAG có thể cấu hình thay vì phụ thuộc platform tích hợp | Trung bình–cao |
 
-**Lưu ý:** OCR-D đã có [nghiên cứu P60 (R2)](REPORT_60_OCR_D.md) trong nhóm 03; BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
+**Lưu ý:** Unstructured đã có [nghiên cứu P58 (R2)](REPORT_58_UNSTRUCTURED.md) trong nhóm 03; OCR-D đã có [nghiên cứu P60 (R2)](REPORT_60_OCR_D.md) trong nhóm 03; BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
 
 ## Quản trị tài liệu
 
