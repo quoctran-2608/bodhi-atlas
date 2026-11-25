@@ -2,7 +2,7 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **26 báo cáo đã có trên GitHub** · **31 đề tài chưa có báo cáo tại đường dẫn này** · **1 prompt tái thẩm định (P39-R2), không tính là báo cáo mới**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **27 báo cáo đã có trên GitHub (26 đề tài có báo cáo, gồm hai bản P39/P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
 > **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P56–P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
@@ -233,10 +233,11 @@ Nhóm cung cấp dữ liệu và quan hệ đã có. “Có văn bản điện t
 **Là gì:** Hệ sinh thái quản lý văn bản Tạng và các tầng dữ liệu có cấu trúc.  
 **BodhiAtlas cần kiểm:** Nghiên cứu mô hình chữ Tạng, bản chép, căn chỉnh và nguồn gốc, không coi là ứng dụng all-in-one.
 
-**P39 · [Bang-ha-giac-ngo](https://github.com/quoctran-2608/Bang-ha-giac-ngo)** · [Đọc báo cáo](REPORT_39_BANG_HA_GIAC_NGO.md) · [P39-R2 — Prompt thẩm định độc lập chuyên sâu](prompts/P39_BANG_HA_GIAC_NGO_DEEP_AUDIT.md)  
-**Là gì:** Repository nguồn PRIVATE của chủ dự án; báo cáo P39 hiện hữu được bảo toàn để đối chiếu lịch sử. Bản báo cáo và prompt lưu tại BodhiAtlas là công khai; truy cập repo nguồn cần quyền.  
-**BodhiAtlas cần kiểm:** Khả năng dùng corpus framework làm lõi V1 hoặc chỉ kế thừa module; kiểm độc lập source identity, source map, EXACT mọi vị trí, Citation Checker, sổ cái học thuật, quyền dữ liệu và khả năng rebuild.  
-**P39-R2 — Trạng thái:** **PROMPT / CHƯA CÓ BÁO CÁO R2** (bổ sung 25/11/2026). Yêu cầu đọc 25–35 file nguồn, phản biện H01–H12, Fit–Gap C01–C15, TC01–TC22, so sánh kiến trúc A–G bằng cùng chuẩn G1–G6. Không mặc định phương án Minimal Core hoặc Bang-ha-led thắng. Báo cáo đầu ra dự kiến: `REPORT_39_BANG_HA_GIAC_NGO_INDEPENDENT_REVIEW.md` (chưa có tệp; không ghi đè P39 cũ).
+**P39 · [Bang-ha-giac-ngo](https://github.com/quoctran-2608/Bang-ha-giac-ngo)** · [Đọc báo cáo](REPORT_39_BANG_HA_GIAC_NGO.md) (bản đầu) · [P39-R2 — Báo cáo thẩm định độc lập chuyên sâu](REPORT_39_BANG_HA_GIAC_NGO_INDEPENDENT_REVIEW.md) (25/11/2026)  
+**Là gì:** Repository nguồn PRIVATE, gồm corpus Phật học đa ngôn ngữ, framework SQLite/FTS5, adapter, CLI/UI, MCP, QA, phát hành chỉ mục và prototype sổ cái học thuật. Hai báo cáo lưu tại BodhiAtlas là công khai; liên kết mã nguồn cần quyền truy cập.  
+**Giá trị với BodhiAtlas:** P39-R2 khuyến nghị `USE AS COMPONENT` **có điều kiện**: nhập corpus một chiều khi quyền cho phép, xem xét kế thừa parser, chỉ mục CJK, QA và cơ chế stage/rollback. Ưu tiên thử **C — Minimal BodhiAtlas Evidence Core**, một lõi có thẩm quyền duy nhất; kiểm khả năng tái sử dụng BCR source resolver/evidence gate trước khi viết mới.  
+**Giới hạn quan trọng:** Tại SHA `4345737ae16638b19226ea1b11007e6ffa4faf62`, báo cáo chỉ ra khoảng trống về định danh ấn bản/revision, EXACT ở cấp bản ghi thay vì mọi occurrence, và contract VERIFIED/SUPPORTED của ledger. Quyền tái sử dụng code/dữ liệu chưa được xác nhận; dữ liệu production D/E chưa tiếp cận.  
+**P39-R2 — Phạm vi chứng cứ:** 29 mục Evidence Ledger, 40 file text Bang-ha và 14 file yêu cầu/đối chứng được lấy nội dung, Fit–Gap C01–C15, H01–H12, so sánh A–G, TC01–TC22. Có 7 ca `TESTED-ISOLATED` trên fixture SQL/text; **0 ca upstream TESTED**, G1–G6 chưa được chứng minh qua upstream. Mã và log cô lập nằm trong §9 và §13 của báo cáo. Xếp hạng chi phí là định tính, chưa benchmark; ưu tiên kiến trúc có thể đảo nếu A/B/G đạt cùng cổng chất lượng với chi phí/rủi ro đo được thấp hơn. Không phải quyết định triển khai.
 
 **P42 · [MITRA-parallel](https://github.com/dharmamitra/mitra-parallel)** · [Đọc báo cáo](REPORT_42_MITRA_PARALLEL.md)  
 **Là gì:** Dataset các cặp đoạn văn Phật học được căn chỉnh qua ngôn ngữ.  
