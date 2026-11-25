@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **60 đề tài** · **31 báo cáo đã có trên GitHub (29 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **61 đề tài** · **32 báo cáo đã có trên GitHub (30 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P58 cùng P60–P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -17,7 +17,7 @@ BodhiAtlas không phải chỉ là “chat với PDF”. Đích đến là một
 - **Tìm và xác minh:** Chuỗi chữ/thuật ngữ/đoạn nào khớp, kiểu khớp gì, có mở lại đúng nguồn không?
 - **Phân tích và tích lũy:** Tác giả lập luận thế nào, có phản chứng không, nhận định nào đã được người nghiên cứu xác nhận?
 
-Một công cụ có thể bao phủ nhiều tầng; vì vậy **60 mục bên dưới không phải 60 thành phần phải cài**.
+Một công cụ có thể bao phủ nhiều tầng; vì vậy **61 mục bên dưới không phải 61 thành phần phải cài**.
 
 ## Chọn đọc theo vấn đề
 
@@ -30,7 +30,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **60 mục bên d
 | Kế thừa corpus Phật học đã số hóa | P03 BuddhismDocuments, P40 FoJin, P41 Dharmamitra, P26 Bilara, P28 CBETA, P29 84000, P51 BDRC |
 | Đối chiếu song hành/dị bản, phân biệt nguồn | P27 sc-data, P42 MITRA, P48 CollateX, P49 passim, P33 TEI |
 | Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace; **P57 book-memex** (thư viện eBook và reader) |
-| Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI, **P56 Open Notebook** (workspace AI/nghiên cứu tùy chọn) |
+| Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI, **P56 Open Notebook** (workspace AI/nghiên cứu tùy chọn), [P59 Haystack (R2)](REPORT_59_HAYSTACK_R2.md) (điều phối workflow) |
 | Kiểm thử tìm đủ mọi vị trí, chất lượng xếp hạng và độ bao phủ | [P61 BEIR](REPORT_61_BEIR.md), P20 SQLite FTS5, P03 BCR; tách Track A (EXACT/G2) và Track B (ranked retrieval) |
 
 ## Cách đọc bằng chứng trong các báo cáo
@@ -41,7 +41,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **60 mục bên d
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 60 đề tài
+## Danh mục 61 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -84,6 +84,13 @@ Nhóm có thể giải quyết đồng thời nhiều chức năng. Cần phân 
 **Là gì:** Không gian nghiên cứu và ghi chú hỗ trợ nhiều notebook, nguồn tài liệu, tìm kiếm BM25/vector, Ask/Chat bằng AI, REST API; có thư viện trích xuất `content-core` tách riêng.  
 **Giá trị với BodhiAtlas:** Có thể thử làm **Research Workspace tùy chọn ở V2/V3**, nhận bản chiếu phiếu chứng cứ một chiều; thử tái dùng `content-core` cho ingestion **chỉ sau POC**. Lõi V1 vẫn cần quản lý nguyên bản, ấn bản, source map và xác minh độc lập.  
 **Giới hạn quan trọng:** Báo cáo kết luận **`TRIAL ONLY` cho toàn bộ Open Notebook**, không dùng làm hệ thống lưu chứng cứ có thẩm quyền: Search BM25/top-K **không** là EXACT mọi vị trí, citation chỉ trỏ item, thiếu mapping nguồn/phiên bản và có rủi ro xóa upload theo cấu hình. **Đã đọc code, chưa chạy upstream/POC**; ưu tiên có điều kiện phương án D — Minimal BodhiAtlas Core. *Báo cáo gốc có một số permalink BodhiAtlas dùng owner khác repo hiện tại, cần đối chiếu khi mở nguồn.*
+
+**P59 · [Haystack](https://github.com/deepset-ai/haystack)** · [Đọc báo cáo](REPORT_59_HAYSTACK_R2.md) (R2, 25/11/2026)  
+**Là gì:** Framework Python điều phối pipeline retrieval/RAG/agent với component có hợp đồng đầu vào/đầu ra, graph, nhánh, vòng lặp, sync/async, tools và evaluator. Không bắt buộc LLM, cloud hoặc vector DB cho mọi pipeline. Báo cáo khảo sát release 3.5.0 tại `831b8cfa95a250cea2134091986f734666cce47d`, phân biệt nhánh 2.x, core OSS, integrations và Hayhooks.  
+**Giá trị với BodhiAtlas:** Ưu tiên tái sử dụng BCR LocalHost/Gate A qua adapter có kiểm quyền (xem [nghiên cứu BCR](REPORT_BCR_EVIDENCE_ENGINE.md) và [P39-R2](REPORT_39_BANG_HA_GIAC_NGO_INDEPENDENT_REVIEW.md)); học typed ports, lỗi có cấu trúc, RRF, context-window và QA theo identity. Thử Pipeline/Agent/Tools/MCP ở V2 nếu workflow thật cần điều phối nhiều nhánh; không tạo agent riêng cho từng nguồn, không tạo authority hoặc store writable thứ hai. Xem [P61 BEIR](REPORT_61_BEIR.md) để tách QA EXACT khỏi đánh giá ranked retrieval. Docling direct là baseline ingest cần kiểm, không thêm wrapper chỉ vì có integration.  
+**Khuyến nghị:** `DEFER` runtime V1, ưu tiên A — direct Python + explicit ports và E — học pattern/test không thêm runtime. `TRIAL ONLY` cho orchestrator tùy chọn V2 sau khi direct baseline và hard gates đạt; chỉ chọn graph/Agent nếu workflow thực chứng minh giảm chi phí bảo trì và giữ nguyên quyền, provenance, kết quả và khả năng gỡ bỏ.  
+**Giới hạn và rủi ro:** BM25/top-K không phải exhaustive EXACT; Document.id, splitter offsets và AnswerBuilder không thay định danh ấn bản/file/revision, native locator hay G2 verifier. R2 chỉ ra LLM arguments có thể ưu tiên hơn Agent State, RRF gộp theo Document.id, wrapper Docling có thể mất custom config khi serialize và tải tokenizer; cần scope do host bind, identity-aware merge, allowlist, budget, telemetry off và deny-egress. TCO, quyền model/dependency và tương thích từng integration chưa nghiệm thu.  
+**Phạm vi chứng cứ:** 41 mục Evidence Ledger, C01–C15, H01–H12, TC01–TC15, R2-I01–I07 và R2-P0–P6. Fixture R1 có 24 đoạn, scanner trả 25/25 literal occurrences, mô hình top-K chỉ trả 10 trong 21 record khớp. Fixture R2 có direct/stdlib async trả đúng 3 span; lỗi một nhánh cho PARTIAL/2, năm negative oracle có kết quả đúng dự kiến. Đây là `TESTED-ISOLATED`, có cả mô hình giản lược theo code; **0 ca upstream/integration TESTED**. Không import Haystack/BCR, chưa chạy corpus thật, model hay benchmark chi phí. Script/log ở §13; không chứng nhận G1–G6.
 
 ### 02. Quản lý thư viện, tư liệu và quy trình số hóa
 
@@ -349,15 +356,14 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ## Các khoảng trống cần tiếp tục kiểm tra
 
-Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Ba hướng dưới đây là **đề xuất khảo sát ngoài danh mục 60 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
+Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Hai hướng dưới đây là **đề xuất khảo sát ngoài danh mục 61 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
 
 | Công nghệ | Khoảng trống nó giúp xem xét | Ưu tiên khảo sát |
 |---|---|---|
 | [PDF.js](https://github.com/mozilla/pdf.js) | Viewer PDF trong browser, mở trang và đánh dấu câu trích trên bản gốc | Rất cao |
 | [Readium Web](https://github.com/readium/web) | Bộ công cụ trình đọc EPUB trên web, cần kiểm tra locator/CFI | Rất cao |
-| [Haystack](https://github.com/deepset-ai/haystack) | Framework pipeline retrieval/RAG có thể cấu hình thay vì phụ thuộc platform tích hợp | Trung bình–cao |
 
-**Lưu ý:** Unstructured đã có [nghiên cứu P58 (R2)](REPORT_58_UNSTRUCTURED.md) trong nhóm 03; OCR-D đã có [nghiên cứu P60 (R2)](REPORT_60_OCR_D.md) trong nhóm 03; BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
+**Lưu ý:** Haystack đã có [nghiên cứu P59 (R2)](REPORT_59_HAYSTACK_R2.md) trong nhóm 01; Unstructured đã có [nghiên cứu P58 (R2)](REPORT_58_UNSTRUCTURED.md) trong nhóm 03; OCR-D đã có [nghiên cứu P60 (R2)](REPORT_60_OCR_D.md) trong nhóm 03; BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
 
 ## Quản trị tài liệu
 
