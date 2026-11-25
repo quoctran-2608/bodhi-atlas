@@ -2,9 +2,9 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **28 báo cáo đã có trên GitHub (26 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **58 đề tài** · **29 báo cáo đã có trên GitHub (27 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
-> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P56–P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
+> **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P57 cùng P61 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
 ## BodhiAtlas đang tìm lời giải cho điều gì?
 
@@ -31,6 +31,8 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên d
 | Quản lý sách, tác giả, trích dẫn, xuất bản | P05 Zotero, P06 Calibre, P07 Islandora, P08 Omeka S, P10 InvenioRDM, P11 DSpace; **P57 book-memex** (thư viện eBook và reader) |
 | Thêm RAG, semantic search, Second Brain | P01 RAGFlow, P02 QMD, P04 LLM Wiki, P54 Open WebUI, **P56 Open Notebook** (workspace AI/nghiên cứu tùy chọn) |
 
+| Kiểm thử tìm đủ mọi vị trí, chất lượng xếp hạng và độ bao phủ | [P61 BEIR](REPORT_61_BEIR.md), P20 SQLite FTS5, P03 BCR; tách Track A (EXACT/G2) và Track B (ranked retrieval) |
+
 ## Cách đọc bằng chứng trong các báo cáo
 
 - **`[DOC]`**: Nhà phát triển công bố; **`[CODE]`**: Đã thấy trong mã nguồn; **`[TESTED]`**: Đã chạy kiểm nghiệm trên đối tượng thực có log; **`[TESTED-ISOLATED]`**: Đã chạy phép thử cô lập/mô phỏng, không phải kiểm thử upstream; **`[INFERRED]`**: Suy luận; **`[UNKNOWN]`**: Chưa rõ. `TESTED` không được gán chỉ vì repo có file test.
@@ -39,7 +41,7 @@ Một công cụ có thể bao phủ nhiều tầng; vì vậy **57 mục bên d
 - Đánh giá giấy phép riêng cho **mã nguồn, model và corpus/ảnh/bản dịch**. Repo mở không đồng nghĩa toàn bộ nội dung được phép tái phân phối.
 - Mỗi mục trong danh mục sau chỉ là **ứng viên/tài nguyên tham khảo**; chỉ chọn sau khi có kiểm thử với corpus BodhiAtlas.
 
-## Danh mục 57 đề tài
+## Danh mục 58 đề tài
 
 Các nhóm xếp theo **vai trò sử dụng**, không phải xếp hạng tốt–xấu. Một số mục là phương pháp/chuẩn hoặc bộ dữ liệu, không phải ứng dụng có thể cài độc lập.
 
@@ -313,6 +315,16 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ---
 
+### 08. Kiểm thử chất lượng truy xuất và benchmark (QA)
+
+**P61 · [BEIR](https://github.com/beir-cellar/beir)** · [Đọc báo cáo](REPORT_61_BEIR.md) (25/11/2026)  
+**Là gì:** Bộ công cụ benchmark Information Retrieval dành cho nghiên cứu/dev/QA, có định dạng corpus/query/qrels, đánh giá kết quả xếp hạng và xuất run; không phải search engine production.  
+**Giá trị với BodhiAtlas:** Tiếp thu phương pháp E ngay, kết hợp phương án D — harness nhỏ Python/SQLite cho **Track A** (mọi occurrence/offset, coverage, đúng file/ấn bản, kiểm chứng nguồn độc lập G2); **Track B** đánh giá ranked retrieval bằng qrels và metric IR. Chỉ so sánh C (backend nhẹ) với B (BEIR evaluator-only) khi có nhu cầu ranked discovery và đã kiểm parity/chi phí.  
+**Khuyến nghị:** `DEFER` dependency BEIR trong V1; không fork, không mặc định cài full suite. Tách recall theo tài liệu khỏi recall theo vị trí; không coi nDCG/MRR hoặc relevance là chứng cứ đã VERIFIED.  
+**Giới hạn quan trọng:** Snapshot BEIR `ef83d29307061c65d04b035b4f4e7c18bd8374af`, tag v2.2.0. Báo cáo nhận diện rủi ro thiếu query trong mẫu số, loader ghi đè ID, mặc định loại self-ID và thay đổi run, dependency và quyền dữ liệu/model. Có 32 mục Evidence Ledger, C01–C15, H01–H12, 5 phương án, TC01–TC16; 4 PASS cô lập trong phạm vi fixture, 4 partial và 1 phản ví dụ; **0 ca upstream/integration TESTED**. Script và log nằm trong §13; chưa có benchmark domain, native parity, gold Phật học được duyệt hay số đo TCO. Không chứng nhận G1–G6.  
+
+---
+
 ## Cách ra quyết định sau khi đọc báo cáo
 
 1. **Đối chiếu năng lực, không so repo bằng số sao.** Một platform đầy đủ không mặc nhiên tốt hơn các công cụ chuyên biệt nếu không giữ được source map.
@@ -323,7 +335,7 @@ Nhóm triển khai bảo toàn file gốc và mở API/MCP; không phải bộ m
 
 ## Các khoảng trống cần tiếp tục kiểm tra
 
-Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Sáu hướng dưới đây là **đề xuất khảo sát ngoài danh mục 57 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
+Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Năm hướng dưới đây là **đề xuất khảo sát ngoài danh mục 58 đề tài hiện tại**, chưa phải báo cáo đã hoàn tất và chưa phải quyết định lựa chọn:
 
 | Công nghệ | Khoảng trống nó giúp xem xét | Ưu tiên khảo sát |
 |---|---|---|
@@ -332,9 +344,8 @@ Danh mục hiện tại có nhiều ứng viên OCR/search/corpus. Sáu hướng
 | [Unstructured](https://github.com/Unstructured-IO/unstructured) | Pipeline tiền xử lý nhiều định dạng, so sánh với Docling/MinerU/Marker | Cao |
 | [Haystack](https://github.com/deepset-ai/haystack) | Framework pipeline retrieval/RAG có thể cấu hình thay vì phụ thuộc platform tích hợp | Trung bình–cao |
 | [OCR-D](https://github.com/OCR-D) | Công cụ và chuẩn luồng OCR với chú trọng ground truth/đánh giá tài liệu lịch sử | Theo nhu cầu bản thảo cổ |
-| [BEIR](https://github.com/beir-cellar/beir) | Framework benchmark information retrieval; tham khảo cách tổ chức đánh giá trên bộ truy vấn chuẩn | Theo nhu cầu benchmark |
 
-**Lưu ý:** BEIR không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark truy xuất vẫn có thể trả sai vị trí/trang khi sử dụng thực tế.
+**Lưu ý:** BEIR đã có [nghiên cứu P61](REPORT_61_BEIR.md) trong nhóm 08. Benchmark truy xuất không thay thế bộ câu trích chuẩn riêng của BodhiAtlas; một hệ thống đứng đầu benchmark vẫn có thể trả sai vị trí/trang.
 
 ## Quản trị tài liệu
 
