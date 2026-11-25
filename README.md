@@ -17,7 +17,7 @@
 
 ## Nghiên cứu và thẩm định công nghệ
 
-- [Bản đồ 58 đề tài nghiên cứu công nghệ và nguồn dữ liệu — xem nhanh và mở báo cáo chi tiết](research/technology-assessments/README.md) — 8 nhóm chức năng; 29 báo cáo chi tiết thuộc 27 đề tài, 31 đề tài chờ báo cáo; bổ sung P61 — BEIR (QA benchmark); cập nhật 25/11/2026.
+- [Bản đồ 59 đề tài nghiên cứu công nghệ và nguồn dữ liệu — xem nhanh và mở báo cáo chi tiết](research/technology-assessments/README.md) — 8 nhóm chức năng; 30 báo cáo chi tiết thuộc 28 đề tài, 31 đề tài chờ báo cáo; bổ sung P60 — OCR-D (R2, QA ingest/OCR); cập nhật 25/11/2026.
 - [Nguyên tắc quản lý nghiên cứu](research/README.md) — phân biệt đề xuất kỹ thuật với quyết định chọn công nghệ; bảo toàn nguồn và giới hạn công khai.
 
 > **Lưu ý:** Các báo cáo nghiên cứu không phải công nghệ đã được duyệt hoặc chức năng đã triển khai.
