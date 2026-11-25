@@ -2,7 +2,7 @@
 
 > **Mục đích:** Giúp người đọc hiểu nhanh **mỗi công nghệ/repository là gì, giải quyết phần nào của BodhiAtlas, giới hạn đáng kiểm tra ở đâu** và tìm đúng báo cáo để đọc sâu. Đây là tài liệu dẫn đường phục vụ lựa chọn kiến trúc, **không phải bảng xếp hạng hoặc quyết định chọn stack**.
 >
-> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **27 báo cáo đã có trên GitHub (26 đề tài có báo cáo, gồm hai bản P39/P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
+> **Ngày cập nhật:** 25/11/2026 (Asia/Ho_Chi_Minh) · **57 đề tài** · **28 báo cáo đã có trên GitHub (26 đề tài có báo cáo; gồm nghiên cứu bổ sung BCR cho P03 và bản P39-R2)** · **31 đề tài chưa có báo cáo tại đường dẫn này**.
 >
 > **Trạng thái biên soạn:** Bản tổng quan dựa trên danh mục P01–P55 cùng P56–P57 và yêu cầu BodhiAtlas V1.4. **Đã đối chiếu sự tồn tại của tệp báo cáo và đường dẫn nội bộ với nhánh `main` ngày 25/11/2026**, nhưng chưa thẩm định lại toàn bộ phát hiện trong từng báo cáo; phần tóm tắt nhằm dẫn đường, không thay cho kết quả thực nghiệm. Mục chưa có báo cáo được ghi rõ thay vì tạo liên kết hỏng.
 
@@ -55,9 +55,11 @@ Nhóm có thể giải quyết đồng thời nhiều chức năng. Cần phân 
 **Là gì:** Máy tìm kiếm tài liệu cục bộ kết hợp truy vấn từ khóa, vector và xếp hạng; có đường tích hợp cho AI.  
 **BodhiAtlas cần kiểm:** Thử tầng retrieval gọn nhẹ; không mặc định BM25/phrase search là tìm đúng mọi vị trí ký tự.
 
-**P03 · [BuddhismDocuments-for-AI](https://github.com/quoctran-2608/BuddhismDocuments-for-AI)** · [Đọc báo cáo](REPORT_03_BUDDHISMDOCUMENTS_FOR_AI.md)  
-**Là gì:** Công cụ corpus Phật học và truy nguyên chứng cứ do chủ dự án phát triển, gồm nguồn được ghim phiên bản và truy vấn chuyên ngành.  
-**BodhiAtlas cần kiểm:** Ưu tiên kiểm kê phần đã có thể kế thừa; phân biệt test phần mềm với thẩm định học thuật.
+**P03 · [BuddhismDocuments-for-AI (BCR)](https://github.com/quoctran-2608/BuddhismDocuments-for-AI)** · [Đọc báo cáo](REPORT_03_BUDDHISMDOCUMENTS_FOR_AI.md) · [Nghiên cứu bổ sung — Nâng cấp BCR Evidence Engine](REPORT_BCR_EVIDENCE_ENGINE.md) (16/11/2026)  
+**Là gì:** Công cụ corpus Phật học và truy nguyên chứng cứ do chủ dự án phát triển, có Python/SQLite FTS5, 13 nguồn ghim phiên bản, CLI, provenance, witness, text role, song hành, dị bản và Gate A xác minh nguồn độc lập.  
+**Giá trị với BodhiAtlas:** Nghiên cứu bổ sung đề nghị **giữ và tối ưu BCR hiện hành**, tách tìm literal mọi occurrence/offset khỏi ranked discovery, kiểm tra coverage và bảo toàn Gate A. Ứng viên POC gồm NiceGUI (UI), RapidFuzz (fuzzy trên candidates), OpenCC và indic_transliteration/pyewts (mở rộng truy vấn theo chữ viết); Datasette là đối chứng UI. Chưa có lý do thực nghiệm để chuyển BCR sang search server mới.  
+**Giới hạn quan trọng:** Baseline `dfdd3cbb79e3dbfb49a855702fa00e4bad3b3410`; giới hạn tập ứng viên FTS, CJK ngắn, fuzzy, resolver chỉ ba họ nguồn và tìm xuyên ngôn ngữ theo nghĩa chưa được nghiệm thu toàn corpus. Báo cáo ngày 16/11/2026 có 16 ca benchmark B01–B16, 5 POC đề xuất, roadmap 6 PR; **benchmark chưa thực thi**, chưa chạy thử các thư viện cùng BCR. Các ước tính ngày công và nhãn ADOPT/ADAPT chỉ là đề xuất POC theo giả định trong báo cáo.  
+**Phân biệt phạm vi:** Đây là đánh giá nâng cấp **BCR tầng 1 không AI**, không phải quyết định chọn BCR làm toàn bộ BodhiAtlas V1 Core. Đối chiếu với [P39-R2](REPORT_39_BANG_HA_GIAC_NGO_INDEPENDENT_REVIEW.md) khi thử tái sử dụng resolver/gate; universal ingest, identity/revision, exhaustive EXACT và kiểm chứng nguồn của BodhiAtlas vẫn cần nghiệm thu độc lập. Giữ nguyên P03 và mã nghiên cứu hiện hữu; báo cáo bổ sung không tạo đề tài mới.
 
 **P04 · [Karpathy LLM Wiki / Second Brain pattern](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)** · [Đọc báo cáo](REPORT_04_KARPATHY_LLM_WIKI_SECOND_BRAIN_PATTERN.md)  
 **Là gì:** Phương pháp “LLM Wiki/Second Brain”: dùng AI duy trì các trang kiến thức liên kết và tích lũy theo thời gian; không phải một search engine hoàn chỉnh.  
